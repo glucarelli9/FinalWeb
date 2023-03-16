@@ -5,7 +5,7 @@ function loadImage(url) {
         xhr.responseType = "blob";
         xhr.onload = function (e) {
             const reader = new FileReader();
-            reader.onload = function(event) {
+            reader.onload = function (event) {
                 const res = event.target.result;
                 resolve(res);
             }
@@ -29,11 +29,19 @@ window.addEventListener('load', async () => {
 
     var cancelButton = document.getElementById('clear');
     cancelButton?.addEventListener('click', function (e) {
-    signaturePad.clear();
+        signaturePad.clear();
     });
     const form = document.querySelector('#form');
     form.addEventListener('submit', (e) => {
         e.preventDefault();
+        //Hijos:
+        
+        //
+        let dniConyu = document.getElementById('dniConyu').value.toUpperCase();
+        let fechaConyu = document.getElementById('fechaConyu').value.toUpperCase();
+        let nombreConyu = document.getElementById('nombreConyu').value.toUpperCase();
+        let conyugecircle = document.getElementById('checkb1').checked;  // check box
+        let asignacion = document.getElementById('select2').value;
         let obrasocial = document.getElementById('obrasocial').value.toUpperCase();
         let nameparent = document.getElementById('nameparent').value.toUpperCase();
         let cuil = document.getElementById('cuil').value.toUpperCase();
@@ -50,12 +58,13 @@ window.addEventListener('load', async () => {
         let domiL = document.getElementById('domiL').value.toUpperCase();
         let domiR = document.getElementById('domiR').value.toUpperCase();
         let nombreyapp = document.getElementById('nombreyapp').value.toUpperCase();
-      generatePDF(obrasocial,nameparent,cuil,contactemer,dni,cel,nacionalidad,telf,state,fechanac,codigop,provi,local,domiL,domiR,nombreyapp);
+        console.log(conyugecircle);
+        generatePDF(dniConyu,fechaConyu,nombreConyu,conyugecircle,asignacion, obrasocial, nameparent, cuil, contactemer, dni, cel, nacionalidad, telf, state, fechanac, codigop, provi, local, domiL, domiR, nombreyapp);
     })
 
 });
 
-async function generatePDF(obrasocial,nameparent,cuil,contactemer,dni,cel,nacionalidad,telf,state,fechanac,codigop,provi,local,domiL,domiR,nombreyapp) {
+async function generatePDF(dniConyu,fechaConyu,nombreConyu,conyugecircle,asignacion, obrasocial, nameparent, cuil, contactemer, dni, cel, nacionalidad, telf, state, fechanac, codigop, provi, local, domiL, domiR, nombreyapp) {
     const image = await loadImage("img/Formularios/Datos_Personales.jpg");
     const signatureImage = signaturePad.toDataURL();
     const pdf = new jsPDF('p', 'pt', 'letter');
@@ -63,44 +72,126 @@ async function generatePDF(obrasocial,nameparent,cuil,contactemer,dni,cel,nacion
     pdf.addImage(signatureImage, 'PNG', 320, 698, 280, 60);
     // Formato a la Fecha de Nacimiento.
     var salida = formato(fechanac)
-    function formato(texto){
-        return texto.replace(/^(\d{4})-(\d{2})-(\d{2})$/g,'$3/$2/$1');
-      }
+    function formato(texto) {
+        return texto.replace(/^(\d{4})-(\d{2})-(\d{2})$/g, '$3/$2/$1');
+    }
     // End
 
     pdf.setFontSize(9);
-    pdf.text(obrasocial,94,255)
-    pdf.text(nameparent,376,243)
-    pdf.text(cuil,76,243)
-    pdf.text(contactemer,393,232)
-    pdf.text(dni,75,232);
-    pdf.text(cel,335,219);
-    pdf.text(nacionalidad,96,219);
-    pdf.text(telf,338,208)
-    pdf.text(state,89,208)
-    pdf.text(salida,123,196);
-    pdf.text(codigop,479,184);
-    pdf.text(provi,262,184);
-    pdf.text(local,85,184);
-    pdf.text(domiL,103,170);
-    pdf.text(domiR,100,161);
-    pdf.text(nombreyapp,125,150);
+
+//Comenzamos con los hijos:
     
 
 
-let date = new Date()
 
-let day = date.getDate()
-let month = date.getMonth() + 1
-let year = date.getFullYear()
 
-    pdf.save("Datos_Personales-"+day+"/"+month+"/"+year+".pdf");
+
+
+
+// Conyuge comienzo
+
+    pdf.text(dniConyu,300,292);
+    // Formato Fecha de nacimiento:
+    var salida2 = formato(fechaConyu)
+    function formato(texto){
+        return texto.replace(/^(\d{4})-(\d{2})-(\d{2})$/g, '$3/$2/$1');
+    }
+    // Fin formato
+
+    pdf.text(salida2,122,292);
+    pdf.text(nombreConyu,168,280);
+
+// Conyuge FIN
+
+    // Check box Analisis
+    if(conyugecircle == true ){
+        pdf.setDrawColor(0);
+        pdf.setFillColor(0, 0, 0);
+        pdf.roundedRect(215, 297, 5, 6, 2, 2, 'FD'); //  Black sqaure with rounded corners 
+    } else {
+        pdf.setDrawColor(0);
+        pdf.setFillColor(0, 0, 0);
+        pdf.roundedRect(182, 297, 5, 6, 2, 2, 'FD'); //  Black sqaure with rounded corners 
+    }
+    // Check box Analisis
+
+   
+   
+   
+    // Comienzo Asignacion
+    if (parseInt(asignacion) == 1) {
+        pdf.text("Asignación Universal por Hijo (AUH)", 335, 303);
+    } else {
+        if (parseInt(asignacion) == 2) {
+            pdf.text("Asignación por Embarazo", 335, 303);
+        } else {
+            if (parseInt(asignacion) == 3) {
+                pdf.text("Asignación por Maternidad", 335, 303);
+            }
+        }
+    }
+    if (parseInt(asignacion) == 4) {
+        pdf.text("Pensión por Fallecimiento", 335, 303);
+    } else {
+        if (parseInt(asignacion) == 5) {
+            pdf.text("Pensión por Invalidez", 335, 303);
+        }
+    }
+    if (parseInt(asignacion) == 6) {
+        pdf.text("Prestación por Desempleo", 335, 303);
+    }
+    if (parseInt(asignacion) == 7) {
+        pdf.text("Pensión por Jubilación", 335, 303);
+    }
+    if (parseInt(asignacion) == 8) {
+        pdf.text("Pro. de Atención Integral a la Primera Infancia", 335, 303);
+    }
+    if (parseInt(asignacion) == 9) {
+        pdf.text("Subsidio Familiar Universal", 335, 303);
+    }
+    if (parseInt(asignacion) == 10) {
+        pdf.text("Subsidio para Madres Jefas de Familia", 335, 303);
+    }
+    if (parseInt(asignacion) == 11) {
+        pdf.text("Asignación Familiar por Hija e Hijo", 335, 303);
+    }
+    //
+    //Fin de Asignacion
+
+    pdf.text(obrasocial, 94, 255)
+    pdf.text(nameparent, 376, 243)
+    pdf.text(cuil, 76, 243)
+    pdf.text(contactemer, 393, 232)
+    pdf.text(dni, 75, 232);
+    pdf.text(cel, 335, 220);
+    pdf.text(nacionalidad, 96, 219)
+    pdf.text(telf, 338, 208)
+    pdf.text(state, 89, 208)
+    pdf.text(salida, 123, 196)
+    pdf.text(codigop, 479, 184)
+    pdf.text(provi, 262, 184)
+    pdf.text(local, 85, 184)
+    pdf.text(domiL, 103, 173)
+    pdf.text(domiR, 100, 161)
+    pdf.text(nombreyapp, 125, 150)
+
+
+
+
+
+    let date = new Date()
+
+    let day = date.getDate()
+    let month = date.getMonth() + 1
+    let year = date.getFullYear()
+
+    pdf.save("Datos_Personales-" + day + "/" + month + "/" + year + ".pdf");
 
 }
 
-  //your javascript goes here
+//your javascript goes here
 var currentTab = 0;
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function (event) {
 
 
     showTab(currentTab);

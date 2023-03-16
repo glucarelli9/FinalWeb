@@ -14,12 +14,19 @@ exports.register = async(req,res) =>{
     // console.log(passHash)
     conexion.query('INSERT INTO users SET ?',{user:user, name:name, pass:passHash}, (error, results)=>{
         if(error){console.log(error)}
-        res.redirect('/')
+        res.redirect('/login')
     })
     } catch (error) {
         console.log(error)
     }
 }
+
+exports.showHome = (req, res) => {
+    const user = req.body.user
+    const name = req.body.name
+    res.render('recibos', { user: user, name: name });
+  }
+
 exports.login = async(req,res) => {
     try {
         const user = req.body.user

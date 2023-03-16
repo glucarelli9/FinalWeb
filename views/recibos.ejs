@@ -1,136 +1,27 @@
-<!doctype html>
-<html lang="en">
-    <head>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Web index Castellani Vidrios">
-    <meta name="author" content="Castellani Vidrios">
-    <meta name="generator" content="Hugo 0.108.0">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <title>Recibo | Sueldo</title>
-    <script src="js/jspdf.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
-    <script src="js/app.js"></script>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/sign-in.css" rel="stylesheet">
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Paystub Download</title>
+  </head>
+  <body>
+    <h1>Download Paystubs</h1>
+    <form action="/download" method="post">
+      <label for="month">Select Month:</label>
+      <select id="month" name="month">
+        <% for (let month of months) { %>
+          <option value="<%= month %>"><%= month %></option>
+        <% } %>
+      </select>
+      <br><br>
+      <label for="employee">Select Employee:</label>
+      <select id="employee" name="employee">
+        <% for (let employee of employees) { %>
+          <option value="<%= employee %>"><%= employee %></option>
+        <% } %>
+      </select>
+      <br><br>
 
-</head>
-
-
-<body class="text-center">
-    <!-- <datalist id="AERO">
-    <option value="SAEZ">EZEIZA</option>
-    <option value="SAAC">Entre Ríos</option>
-    <option value="SADJ">José C. Paz</option>
-    <option value="SADM">Morón</option>
-    <option value="SAZT">Tandil</option>
-    <option value="SABE">Ciudad Autónoma de Buenos Aires</option>
-    <option value="SAAR">Rosario</option>
-    <option value="SADF">San Fernando</option>
-    <option value="SADP">El Palomar</option>
-    <option value="SAZM">Mar del Plata</option>
-    <option value="SACO">Córdoba</option>
-    <option value="SAME">Mendoza</option>
-    <option value="SAOR">Villa Reynolds</option>
-    <option value="SARE">Resistencia</option>
-    <option value="SARL">Paso de los Libres</option>
-    <option value="SATG">Goya</option>
-    <option value="SATR">Reconquista</option>
-    <option value="SAVC">Comodoro Rivadavia</option>
-    <option value="SAVY">Puerto Madryn</option>
-    <option value="SAWH">Ushuaia</option>
-    <option value="SANU">San Juan</option>
-    <option value="SANT">San Miguel de Tucumán</option>
-    <option value="SAVV">Viedma</option>
-    <option value="SASA">SALTA</option>
-    <option value="SAAV">Sauce Viejo</option>
-    <option value="SANE">Santiago del Estero</option>
-    <option value="SAZR">Santa Rosa</option>
-    <option value="SANL">La Rioja</option>
-    <option value="SANR">Termas de Río Hondo</option>
-    <option value="SAWG">Río Gallegos</option>
-    <option value="SAWE">Río Grande</option>
-    <option value="SAVT">Trelew</option>
-    <option value="SAOC">Río Cuarto</option>
-    <option value="SARP">Posadas</option>
-    <option value="SAAP">Paraná</option>
-    <option value="SAZN">Neuquén</option>
-    <option value="SASJ">Perico</option>
-    <option value="SARI">Puerto Iguazú</option>
-    <option value="SAWC">El Calafate</option>
-    <option value="SARF">Formosa</option>
-    <option value="SAVE">Esquel</option>
-    <option value="SANC">San Fernando del Valle de Catamarca</option>
-    <option value="SAZY">San Martín de los Andes</option>
-    <option value="SARC">Corrientes</option>
-    <option value="SAZS">Bariloche</option>
-    <option value="SAZB">Bahía Blanca</option>
-    <option value="SAMR">San Rafael</option>
-</datalist> -->
-
-    <div class="container mt-3">
-        <div class="row">
-            <div class="col-md-20 offset-md-0">
-
-    <main class="form-signin2 w-100 m-auto text-center shadow-lg p-1">
-  
-        <form id="formLogin" action="/login" method="POST" >
-          <img class="mb-4" src="img/logo_iniciarsesion-04.png" alt="" width="122" height="100">
-          <h1 class="h3 mb-3 fw-normal" id="title"><strong>Recibo de Sueldo</strong></h1>
-          <hr>
-          <form class="form-inline">
-              <label class="my-1 mr-2 mt-6" for="inlineFormCustomSelectPref">Seleciona Mes:</label>
-              <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-                <option selected>Mes</option>
-                <option value="1">Enero</option>
-                <option value="2">Febrero</option>
-                <option value="3">Marzo</option>
-                <option value="4">Abril</option>
-                <option value="5">Mayo</option>
-                <option value="6">Junio</option>
-                <option value="7">Julio</option>
-                <option value="8">Agosto</option>
-                <option value="9">Septiembre</option>
-                <option value="10">Octubre</option>
-                <option value="11">Noviembre</option>
-                <option value="12">Diciembre</option>
-              </select>
-
-      
-          <!-- <div class="checkbox mb-3">
-            <label>
-              <input type="checkbox" value="remember-me"> Recordame
-            </label>
-          </div> -->
-
-<!--  Firma digital -->
-<br>
-<span class="mt-3 mb-3">Firma digital aqui</span>
-<div class="signature" style="width: 100%; height: 200px;">
-    <canvas id="signature-canvas" style="border: 1px dashed red; width: 100%; height: 200px; touch-action: none;" height="200" width="1296"></canvas>
-</div>
-<div>      
-<button type="submit" id="botonCrear" class="w-100 btn btn-danger"><span class="fas fa-save"></span>&nbsp; Generar PDF</button>
-</div>
-
-</div>
-</form>
-
-<div style="padding:5 !important;margin:0 !important;width: 299% !important;height: 0 !important;/* margin-top:-6em !important; */margin-bottom:6em !important;">
- <button id="clear" class="btn btn-primary" style="position: center">Limpiar Firma</button>
- <a href="/" class="btn btn-primary" >Volver</a>
-
-</div>
-
-</div>
-
-</div>
-
-    
-        </form>
-      </main>
-  
-</body>
-
+      <input type="submit" value="Download">
+    </form>
+  </body>
 </html>

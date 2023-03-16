@@ -11,6 +11,7 @@
     <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
     
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="css/legajo.css">
     <!-- Scrips de js -->
     <script src="css/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -22,6 +23,16 @@
         function showContent() {
             element = document.getElementById("content");
             check = document.getElementById("check");
+            if (check.checked) {
+                element.style.display='block';
+            }
+            else {
+                element.style.display='none';
+            }
+        }
+        function showContent2(){
+            element = document.getElementById("content2");
+            check = document.getElementById("checkb2");
             if (check.checked) {
                 element.style.display='block';
             }
@@ -45,11 +56,11 @@
     <option value="Ecuador">Ecuador</option>
 </datalist>
 <body>
+ 
     
 
-
-
     <form id="form" >
+        <hr>
         <h1>LEGAJO DEL EMPLEADO</h1>
         <hr>
       
@@ -67,51 +78,137 @@
                             <span class="step"></span> 
                         </div>
                         <div class="tab">
+
+
+
                             <label class="fst-normal" for="label">Apellidos y Nombres:</label>
-                            <p><input class="form-control" type="text" id="nombreyapp" name="nombreyapp"></p>
+                            <p><input class="form-control" type="text" style="text-transform:uppercase" id="nombreyapp" name="nombreyapp"></p>
                             <label class="fst-normal" for="label">Domicilio Real:</label>
-                            <p><input class="form-control" type="text" id="domiR" name="domiR"></p>
+                            <p><input class="form-control" style="text-transform:uppercase" type="text" id="domiR" name="domiR"></p>
                             <label class="fst-normal" for="label">Domicilio Legal:</label>
-                            <p><input class="form-control" type="text" id="domiL" name="domiL"></p>
+                            <p><input class="form-control" style="text-transform:uppercase" type="text" id="domiL" name="domiL"></p>
                             <label class="fst-normal" for="label">Localidad:</label>
-                            <p><input class="form-control" type="text" id="local" name="local"></p>
+                            <p><input class="form-control" style="text-transform:uppercase" type="text" id="local" name="local"></p>
                             <label class="fst-normal" for="label">Provincia:</label>
-                            <p><input class="form-control" type="text" id="provi" name="provi"></p>
+                            <p><input class="form-control" style="text-transform:uppercase" type="text" id="provi" name="provi"></p>
                             <label class="fst-normal" for="label">Codigo Postal:</label>
-                            <p><input class="form-control" type="text" id="codigop" name="codigop"></p>
+                            <p><input class="form-control" style="text-transform:uppercase" type="text" id="codigop" name="codigop"></p>
                             <label class="fst-normal" for="label">Fecha de Nacimiento:</label>
-                            <p><input class="form-control" type="date" id="fechanac" name="fechanac"></p>
+                            <p><input class="form-control" style="text-transform:uppercase" type="date" id="fechanac" name="fechanac"></p>
                             <label class="fst-normal" for="label">Estado Civil:</label>
-                            <p><input class="form-control" type="text" id="state" name="state"></p>
+                            <p><input class="form-control" style="text-transform:uppercase" type="text" id="state" name="state"></p>
                             <label class="fst-normal" for="label">Telefono:</label>
-                            <p><input class="form-control" type="number" id="telf" name="telf"></p>
+                            <p><input class="form-control" style="text-transform:uppercase" type="number" id="telf" name="telf"></p>
                             <label class="fst-normal" for="label">Nacionalidad:</label>
-                            <p><input list="Paises" class="form-control" id="nacionalidad" name="nacionalidad">
+                            <p><input list="Paises" class="form-control" style="text-transform:uppercase" id="nacionalidad" name="nacionalidad">
                             <label class="fst-normal" for="label">Celular:</label>
                             <p><input class="form-control" type="number" id="cel" name="cel"></p>
-                            <label class="fst-normal" for="label">DNI:</label>
+                            <label class="fst-normal" for="label">DNI N°:</label>
                             <p><input class="form-control" type="number" id="dni" name="dni"></p>
                             <label class="fst-normal" for="label">Contacto de Emergencia:</label>
                             <p><input class="form-control" type="number" id="contactemer" name="contactemer"></p>
                             <label class="fst-normal" for="label">CUIL:</label>
                             <p><input class="form-control" type="number" id="cuil" name="cuil"></p>
                             <label class="fst-normal" for="label">Nombre/Parentezco:</label>
-                            <p><input class="form-control" type="text" id="nameparent" name="nameparent"></p>
+                            <p><input class="form-control" style="text-transform:uppercase" type="text" id="nameparent" name="nameparent"></p>
                             <label class="fst-normal" for="label">Obra Social:</label>
-                            <p><input class="form-control" type="text" id="obrasocial" name="obrasocial"></p>
+                            <p><input class="form-control" style="text-transform:uppercase" type="text" id="obrasocial" name="obrasocial"></p>
                             <strong><label class="align-items-center" for="label">Datos de Familia:</label></strong>
                             <hr>
-                            <label class="fst-normal align-items-center" for="label">¿Tiene Hijos y Familia?</b></label>
-                            <br>
+                           
+                            <label class="fst-normal" for="label">¿Cobra Asignaciones Familiares?</label>
                             <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" name="check" id="check" value="1" onchange="javascript:showContent()" />
-                            <label class="form-check-label fst-normal align-items-center"  for="flexSwitchCheckDefault">Si / No</label>
-                        </div>
-                        <div></div>
-                        <br>
-                        
+                                <input class="form-check-input" type="checkbox" name="checkb2" id="checkb2" value="2" onchange="javascript:showContent2()"/> 
+                                <label class="form-check-label fst-normal align-items-center"  for="flexSwitchCheckDefault">NO / SI</label>
+                            </div>
+
+                            <div id="content2" style="display: none;">
+                                <select id="select2" class="form-select">
+                                    <option value="" selected></option>
+                                    <option value="1">Asignación Universal por Hijo (AUH)</option>
+                                    <option value="2">Asignación por Embarazo</option>
+                                    <option value="3">Asignación por Maternidad</option>
+                                    <option value="4">Pensión por Fallecimiento</option>
+                                    <option value="5">Pensión por Invalidez</option>
+                                    <option value="6">Pensión por Jubilación</option>
+                                    <option value="7">Prestación por Desempleo</option>
+                                    <option value="8">Programa de Atención Integral a la Primera Infancia (PAIDI)</option>
+                                    <option value="9">Subsidio Familiar Universal</option>
+                                    <option value="10">Subsidio para Madres Jefas de Familia</option>
+                                    <option value="11">Asignación Familiar por Hija e Hijo</option>
+                                  </select>
+                                  
+                            </div>
+
+                            <label class="fst-normal align-items-center" for="label">¿Tiene Conyuge?</b></label>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" name="check" id="check" value="1" onchange="javascript:showContent()"/> 
+                                <label class="form-check-label fst-normal align-items-center"  for="flexSwitchCheckDefault">NO / SI</label>
+                              
+                            </div>
+                          
+                            
+                       
+                     <!-- Dentro del Checkbox -->
                             <div id="content" style="display: none;">
-                                <input class="form-control" type="text" id="obrasocial" name="obrasocial">
+                                <!--  Comienzo check box -->
+                                <label class="fst-normal" for="label">¿Trabaja en relacion de dependencia?</label>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" name="checkb1" id="checkb1" value="0"/> 
+                                    <label class="form-check-label fst-normal align-items-center"  for="flexSwitchCheckDefault">NO / SI</label>
+                                </div>
+                                <!-- Relacion de dependecia check box FIN -->
+
+                                <label for="label" class="fst-normal"> Apellido y Nombre del Conyuge</label>
+                                <input class="form-control" type="text" id="nombreConyu" name="nombreConyu" style="text-transform:uppercase">
+                                <label>Fecha de Nacimiento:</label>
+                                <p><input class="form-control" type="date" placeholder="DD-MM-AAAA" style="text-transform:uppercase" id="fechaConyu" name="fechaConyu"></p>
+                                <label for="label">DNI N°:</label>
+                                <p><input class="form-control" type="number" id="dniConyu" name="dniConyu" style="text-transform:uppercase"></p>
+
+                                <!-- Cantidad de Hijos -->
+                                <label for="label">Hijos:</label>
+                                <select id="selector" class="form-select">
+                                    <option value=""selected>0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                  </select>
+                                  <br>
+                                  
+                                  <div id="inputsContainer">
+                                  
+                                  </div>
+                                    
+                                  <script>
+                                    const selector = document.getElementById("selector");
+                                    const inputsContainer = document.getElementById("inputsContainer");
+                                    const inputsContainerFecha = document.getElementById("inputsContainerFecha");
+                                  
+                                    selector.addEventListener("change", function() {
+                                      inputsContainer.innerHTML = "";
+                                      for (let i = 0; i < this.value; i++) {
+                                        const label = document.createElement("label");
+                                        label.type = "text";
+                                        label.textContent = "Nombres y Apellidos"+` ${i+1}`;
+
+                                        inputsContainer.appendChild(label);
+
+                                        const input = document.createElement("input");
+                                        input.type = "text";
+                                        input.className = "form-control";
+                                        input.id = `hnomyapp${i + 1}`;
+                                        // input.placeholder = `Nombre y Apellido ${i + 1}`;
+                                        inputsContainer.appendChild(input);
+                                      }
+                                    });
+                                  </script>
+
+
+
                               </div>
 
 
@@ -119,10 +216,11 @@
          <!-- Firma Digital -->
          <hr>
          <label class="text-uppercase">Firma digital</span>
-         <div class="signature" style="width: 140%; height: 200px;">
-             <canvas id="signature-canvas" style="border: 1px dashed red; width: 100%; height: 200px;"></canvas>
-         </div class="col-md-2 mt-2">
-       
+         <div class="signature" style="width: 100%; height: 200px;">
+             <canvas id="signature-canvas" style="border: 1px dashed red; width:100%; height: 200px;"></canvas>
+            
+         </div>
+         <a id="clear" class="btn btn-primary">Limpiar Firma</a>
          <!-- Firma Digital -->
                         </div>
                         <div class="tab">
@@ -168,8 +266,8 @@
                         </div>
                         <div style="overflow:auto;" id="nextprevious">
                             <div style="float:right;"> 
-                                <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button> 
-                                <button type="submit" id="nextBtn" onclick="nextPrev(1)">Next</button> 
+                                <button type="button" class="button-primary" id="prevBtn" onclick="nextPrev(-1)">Previous</button> 
+                                <button type="submit" class="button-primary" id="nextBtn" onclick="nextPrev(1)">Siguiente</button> 
                             </div>
                         </div>
                     </form>

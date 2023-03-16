@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "vaulted-arcana-375113",
+  "private_key_id": "477b55689dd21bf4781ad9caca3603b3dbdc64a5",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCrC9KnmS/26CLG\nn3NNZNVyR5KF3KbgALZFUWz0grl0xh4FZV5pAuwgmAl+1A/LizimKy0ZKAZlg6G0\nTc2wUZVydPIymPUf+sAUZAI2B3KdPVLg7Q24PERZVO5+Q+MzQfl7woWv5l3o1H0J\nRjHTnxCqlyGQb326JZ9SY/5jInV2vjo09w9nwhvZzsd89BtagsN5iI5SQQoUwitc\n5kEYyla++M9qUW1PsaB84h0IYx9dC7pYj2ynhTViTlK3vdCMmVVARIaJkOfoNTWI\nK62NHT3X4YzkNQgcLdzFC9zdUS5aZ9DIZzF6BF3X9wJ2Dd4a2pewbmPow+kDukr5\n+OLttgPlAgMBAAECggEAJf7vGVxp330DJqCqhh15XdTA23wf1MBLvRvAqpM0e9h7\nuEKjpYuo5PepGlOku5guahlKwB0YSKokPG+RGtMQsfeBCtTYFPXIf+8UX6ipYP0L\noVv/cXbvzvFTNljBynPkJgYY2PGBWHSFXw9JB8O8ucxvQAzIPtbXLL/6NU7lDY6I\njMlMNOfCcKmEwLemyzS+LieIJghote6WkQkctvlp3RMXJPXsSDyKWLmlqwUPQERB\nFO0BwoHj2urBPrMo1bNlydMAronvXfdBxjvjrdeX61zVNMgs1wNjesjL5piLgb98\nrChX1Na8ceMkgr7WLzayoWp2a8JHVG/YNjXjaEAtEQKBgQDi8E2oDqU6f9WL++7a\n8UEk82fAilnKy90IOmW+iKXjyE9/zetDIN6J71qQL6Vd/FfNbVS2MMCy/T87Hlwx\nbI4BUMt/jgGagFG1PC708wZE/p0Us6t1GMVOlId3Zwt1J/U/hnXMJ/+mog73fpKl\nY2PIWw7DJ9ZqskGAoNxVUDmGVQKBgQDA8zQ+E/m1pF/bdSBSorjQRtryxxAI3ikW\nmobGRVFkwoPnoxj8hHkfyfIWg1RD8il3sDxv6h+35QqodPhH5SmqcEq7Q0+35kQ6\nvKp+MxnkEab30Oxw74Hr1lj+lMlwRNPvMi2a/DRoocXVfD9KUWERwc6SVbYYoKSj\npMEITM13UQKBgQDTD9upqbVSKwJZJv6G8ko8K4UbNZE9Y003Edj+0+g1aV9G5iUg\nUbmnX81CvI14U/D1RfG7YKxXy+C7AwmLjgKkhpg9Eb28DAvyGv8xIbV7BbLiRhf4\n2AjphIpZKqUlWPxnEI8OSUUjnSV+WWHaIA31kXqxVqO8p/zzvKgvUGWv4QKBgGIt\nngCUY3Q0jn35bBgAKm/4DcKI3bTVbizNNhS/Arp1a267A6TBt2wgcqlX69Gi78yy\nBR6hD8Cfr7ulwQu8JGZQOwZsKq0VYtRMWahbUipFfSMN0LFqfT5GVAQ+Kv2QWBKX\nArOg7v3qiuKlFQM4w16osfat3DlNzFhkJcCWa9nxAoGATLH4N9K3CLZdir84UQi5\nT4Xw0UfWeotTWBeCE5TFg+Y8KVlLQQHR0Oz48LCB1Imj6xvsS4Rqp81Qj+Fnx8jN\nYfJVynVr9VUqVqEe8fA+7Q/umtPXx3N5ltmH9vFW6lmEXgXcIOhxH5qIJNw4ADum\nvmUBjywk64UjPcdtDbNVItc=\n-----END PRIVATE KEY-----\n",
+  "client_email": "prueba-subida@vaulted-arcana-375113.iam.gserviceaccount.com",
+  "client_id": "105940282671918422786",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/prueba-subida%40vaulted-arcana-375113.iam.gserviceaccount.com"
+}
