@@ -31,7 +31,32 @@ h5,
 h6 {
   font-family: "Jost", sans-serif;
 }
-
+.right-title {
+  position: absolute;
+padding: 0em;
+left: 49em;
+top: 57em;
+}
+.right-title2 {
+  position: absolute;
+padding: 0em;
+left: 49em;
+top: 64em;
+}
+.left-title {
+  position: absolute;
+  padding: 0em;
+  left: 6em;
+  top: 57em;
+  font-size: x-large;
+}
+.left-title2 {
+  position: absolute;
+  padding: 0em;
+  left: 9.5em;
+  top: 63em;
+  font-size: x-large;
+}
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -59,6 +84,12 @@ h6 {
   height: 60px;
   -webkit-animation: animate-preloader 1s linear infinite;
   animation: animate-preloader 1s linear infinite;
+}
+.logoclimanet{
+  width: 9em;
+  position: absolute;
+  right: 44%;
+  top: 14em;
 }
 
 @-webkit-keyframes animate-preloader {
@@ -140,16 +171,48 @@ h6 {
 @media (max-width: 767px) { /* ajusta los estilos para dispositivos con pantalla de hasta 767px de ancho */
   .image1{
     position: absolute;
-    width: 8%;
+    width: 16%;
     margin-bottom: 0em;
-    margin-top: -6em;
+    margin-top: -8em;
+    left: 6em;
+  }
+  div#slider figure img {
+    width: 358px;
+    float: left;
+    height: 222px;
+}
+  .logoclimanet{
+    width: 4em;
+    position: absolute;
+    right: 10em;
+    top: 13em;
+  }
+  .imagenDVH img {
+    width: 22.4em;
+    height: 19em;
+    position: relative;
+    text-align: center;
+  }
+  .imagen img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+}
+  #header{
+    padding: 14px 2em;
+  }
+  .image4{
+    top: 27%;
+    width: 8em;
+    right: 9em;
   }
   .image2 {
-    position: absolute; /* desactiva la posición absoluta */
-    width: 20%; /* establece el ancho máximo al 100% */
-    margin-bottom: 1em; /* agrega un margen inferior para separar las imágenes */
-    margin-top: -5.5em;
-    margin-left: 10em;
+    position: absolute;
+    width: 35%;
+    /* margin-bottom: 0em; */
+    margin-top: -7.5em;
+    left: 12em;
   }
   .banner {
     width: 100%;
@@ -167,27 +230,25 @@ h6 {
   }
   .image6 {
     position: absolute;
-    top: 26%;
-    right: 39%;
-    width: 22%;
+    top: 23%;
+    right: 34%;
+    width: 36%;
     filter: invert(1);
+}
   }
-  .imagenV img {
-    height: 19em;
+  /* .imagenV img {
+    height: 100%;
     position: relative;
     text-align: center;
-    width: 21.59em;
-  }
+    width: 93em;
+  } */
+
   .img-fluid {
+    height: 100%;
     max-width: 100%;
-    height: 30em;
+    /* height: 20em; */
 }
-  /* .imagen img{
-    width: 70em;
-    margin-left: -10em;
-    margin-bottom: 10em;
-    } */
-}
+
 .beneficios li {
   color: #dc3545;
   margin-bottom: 10px;
@@ -230,10 +291,41 @@ button{
     max-width: fit-content;
     max-height: fit-content;
   }
+  .left-title {
+
+    position: absolute;
+    padding: 0em;
+    left: 22%;
+    top: 95em;
+    font-size: x-large;
+  }
+  .left-title2 {
+    
+    position: absolute;
+    padding: 0em;
+    left: 42%;
+    top: 98em;
+    font-size: x-large;
+}
+.right-title {
+  
+  position: absolute;
+  padding: 0em;
+  left: 4em;
+  top: 102em;
+}
+.right-title2 {
+ 
+  position: absolute;
+  padding: 0em;
+  left: 4em;
+  top: 105em;
+}
 }
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
+
 .back-to-top {
   position: fixed;
   visibility: hidden;
@@ -270,7 +362,7 @@ button{
 #header {
   transition: all 0.5s;
   z-index: 997;
-  padding: 15px 0;
+  padding: 1em 1em 1em 1em;
   background-color: #dc3545;
 }
 
@@ -338,6 +430,7 @@ sup{
   opacity: 1;
   
 }
+
 
 
 /*  */
@@ -524,7 +617,7 @@ sup{
   position: absolute;
   top: 55px;
   right: 15px;
-  bottom: 15px;
+ 
   left: 15px;
   padding: 10px 0;
   border-radius: 10px;
@@ -540,11 +633,7 @@ sup{
   color: #dc3545;
 }
 
-.navbar-mobile a:hover,
-.navbar-mobile .active,
-.navbar-mobile li:hover>a {
-  
-}
+
 
 .navbar-mobile .getstarted,
 .navbar-mobile .getstarted:focus {
@@ -626,7 +715,7 @@ hr{
   
   body { margin: 0; } 
   div#slider { overflow: hidden; }
-  div#slider figure img { width: 20%; float: left; }
+  div#slider figure img { width: 20%;height: 514px;; float: left; }
   div#slider figure { 
     position: relative;
     width: 500%;
@@ -708,6 +797,7 @@ hr{
     height: auto;
     text-align: center;
   }
+
 
   #hero .animated {
     -webkit-animation: none;
@@ -793,7 +883,7 @@ section {
 
 .section-title {
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 44px;
 }
 .section-title h2.dvh2{
   font-size: 32px;
@@ -874,6 +964,16 @@ section {
   bottom: 0;
   left: calc(50% - 195px);
 }
+.section-title h2#subnos::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #171717;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
 .section-title h2::after {
   content: "";
   position: absolute;
@@ -884,10 +984,38 @@ section {
   bottom: 0;
   left: calc(50% - 20px);
 }
-
 .section-title p {
   margin-bottom: 0;
 }
+
+/* Estilos para el contenedor personalizado */
+.custom-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Estilos para las columnas */
+.custom-container .col {
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.my-custom-class {
+  margin-right: 10px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+
+/* Estilos para las imágenes */
+.custom-container img {
+  max-width: 76px;
+  height: auto;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
 
 /*--------------------------------------------------------------
 # Clients
@@ -1127,8 +1255,9 @@ section {
 .col-lg-5 img#mapa{
   position: absolute;
     left: 8em;
-    top: -8em;
+    top: -11em;
     height: 52em;
+    border-radius: 40%;
 }
 
 .skills .content ul i {
@@ -1228,7 +1357,7 @@ section {
   background: linear-gradient(rgba(210, 19, 19, 0.777), #b02a37c3), url(https://i.imgur.com/J5sfgLC.jpg) fixed center center;
   background-size: cover;
   padding: 57px 0;
-  padding-left: 2em;
+  padding-left:  8em;
 }
 
 
@@ -1312,7 +1441,7 @@ section {
 }
 
 .portfolio .portfolio-item .portfolio-info {
-  opacity: 0;
+  opacity: 90%;
   position: absolute;
   left: 15px;
   bottom: 0;
@@ -1824,7 +1953,27 @@ section {
 .contact .php-email-form .form-group {
   padding-bottom: 8px;
 }
+.form-radio{
+  transform: scale(1.6);
+ 
+}
+.form-label {
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 0.5em;
+}
 
+.form-input {
+  font-size: 1em;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.form-check{
+ 
+  padding-left: 0.3em;
+}
 .contact .php-email-form .validate {
   display: none;
   color: red;
@@ -1894,10 +2043,6 @@ section {
 .contact .php-email-form input:focus,
 .contact .php-email-form textarea:focus {
   border-color: #dc3545;
-}
-
-.contact .php-email-form input {
-  
 }
 
 .contact .php-email-form textarea {
@@ -2041,10 +2186,15 @@ section {
 }
 
 #footer .footer-top {
-  padding: 60px 0 30px 0;
+  padding: 60px 0 0px 0;
   background: #fff;
 }
+.iso{
+  position: absolute;
+    left: -13%;
+    padding: 0.5% 0% 0% 14%;
 
+}
 #footer .footer-top .footer-contact {
   margin-bottom: 30px;
 }
@@ -2169,4 +2319,9 @@ section {
   #footer .credits {
     padding-top: 4px;
   }
+}
+@keyframes ldio-dl0ttvfj95 {
+  0% { transform: rotate(0deg) }
+  50% { transform: rotate(180deg) }
+  100% { transform: rotate(360deg) }
 }

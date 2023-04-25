@@ -9,12 +9,14 @@
   <meta name="author" content="Castellani Vidrios">
 
   <!-- Favicons -->
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-
+  <link rel="icon" type="image/png" sizes="16x16"  href="img/favicon-16x16.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
   <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet">
+
 
   <!-- Vendor CSS Files -->
   <link href="css/aos/aos.css" rel="stylesheet">
@@ -33,30 +35,252 @@
 
 <body>
 
+<!--- Slider Indicators --->
+<div id="carousel-HomeJumbotron" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carousel-HomeJumbotron" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+    <button type="button" data-bs-target="#carousel-HomeJumbotron" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+    <button type="button" data-bs-target="#carousel-HomeJumbotron" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+    <button type="button" data-bs-target="#carousel-HomeJumbotron" data-bs-slide-to="3" aria-label="Slide 4" class=""></button>
+  </div>
+  <!--- Carousel Inner --->
+  <div class="carousel-inner">
+    <!--- Slide One --->
+    <div class="carousel-item slide-one-image active" role="img" aria-label="adorable photo of a squirrel">
+      <div class="carousel-item-bg"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="home-hero-header">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--- End of Slide One--->
+    <!--- Slide Two --->
+    <div class="carousel-item slide-two-image" role="img" aria-label="photo of the woods">
+      <div class="carousel-item-bg"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="home-hero-header">
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--- End of Slide Two--->
+    <!--- Slide Three --->
+    <div class="carousel-item slide-three-image" role="img" aria-label="photo of a pond">
+      <div class="carousel-item-bg"></div>
+      <div class="container">
+        <!-- <div class="row">
+          <div class="col-md-6">
+            <div class="home-hero-header">
+             
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+<!-- SLIDE 4 -->
+<div class="carousel-item slide-four-image" role="img" aria-label="photo of a pond2">
+  <div class="carousel-item-bg"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="home-hero-header">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END 4 -->
+
+  </div>
+  <!--- End of Slide Three--->
+  <!--- End of Carousel Inner --->
+</div>
+<!--- Left and Right Slide Buttons--->
+<button class="carousel-control-prev" type="button" data-bs-target="#carousel-HomeJumbotron" data-bs-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#carousel-HomeJumbotron" data-bs-slide="next">
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Next</span>
+</button>
+
+<style>
+
+
+.slide-one-image {
+  background-image: url("https://i.imgur.com/hU0itKj.jpg"); 
+  background-position: top center;
+}
+
+.slide-two-image {
+  background-image: url("https://i.imgur.com/blZsudc.png");
+  background-position: top center;
+}
+
+.slide-three-image {
+  background-image: url("https://i.imgur.com/XIgZW4J.png");
+  background-position: top center;
+  
+}
+.slide-four-image{
+  background-image: url("https://i.imgur.com/2IxWbGF.jpg");
+  background-position: top center;
+}
+
+.home-hero-header { 
+  color: #fff;
+  padding: 30px 30px;
+  margin-top: 65vh;
+  margin-left: 5vw;
+}
+
+.home-hero-header .btn {
+  position: relative;
+  bottom: -5px;
+}
+
+.carousel-item {
+  background-size: cover;
+  height: 100vh;
+  z-index: -1;
+  position: relative;
+}
+
+.carousel .container {
+  z-index: 9999;
+  position: relative;
+}
+
+.carousel-item-bg {
+
+}
+
+.home-hero-header p {
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.carousel-item-bg img {
+  width: 100% !important;
+  height: auto !important;
+  opacity: 0.5;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 70vh;
+}
+.carousel-control-next,
+.carousel-control-prev {
+  top: 0;
+}
+
+nav + .carousel {
+  top: -60px;
+  margin-bottom: -60px;
+}
+
+.carousel-item .container img {
+  margin: auto 10px;
+  display: block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -35%);
+  width: 100% !important;
+  height: auto !important;
+  max-width: 60%;
+}
+/* Mobile Slider */
+@media (max-width: 768px) {
+  .carousel-item {
+    height: 100vh;
+  }
+
+  .carousel-inner {
+    height: 100vh;
+  }
+  .home-hero-header {
+    background-color: #031531;
+    color: #fff;
+    padding: 3vh 3vw;
+    margin-top: 60vh !important;
+    margin-left: 0vw;
+  }
+  .carousel-control-next,
+  .carousel-control-prev {
+    bottom: 350px;
+  }
+  .home-hero-header p {
+    font-weight: 500;
+    font-size: 1.4rem;
+  }
+  .carousel-control-next,
+  .carousel-control-prev {
+    top: 40vh;
+  }
+}
+/* Large Screen Slider */
+@media (min-width: 1700px) {
+  .carousel-item {
+    width: 80vw;
+    margin: 0 auto;
+  }
+  .carousel-inner {
+    width: 80vw;
+    margin: 0 auto;
+  }
+  .carousel-control-next,
+  .carousel-control-prev {
+    width: 25%;
+  }
+}
+</style>
+
+ 
+
+
   <!-- ======= NAVBAR ======= -->
-  <header id="header" class="fixed-top ">
+  <header id="header" class="fixed-top" >
     <div class="container d-flex align-items-center">
 
       <h1 class="logo me-auto"><a href="/">Castellani</a></h1>
  
       <nav id="navbar" class="navbar">
+   
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Inicio</a></li>
+         
+          <li><a class="nav-link scrollto" href="#hero">Inicio</a></li>
           <li><a class="nav-link scrollto" href="#about">Nosotros</a></li>
+          <li><a class="nav-link scrollto" href="#portfolio">Obras</a></li>
           <li class="dropdown"><a href="/vidrios">Vidrios</a>
           <ul>
-            <li><a href="/dvh">DVH</a></li>
+            <li><a href="/vidrios">Distribucion VASA</a></li>
+            <li><a href="/dvh">DVH Climanet</a></li>
           </ul>
           </li>
 
-          <li class="dropdown"><a href="#">Perfileria</a>
+          <li class="dropdown"><a href="/Aluminio">Perfileria</a>
           <ul>
             <li><a class="nav-link scrollto" href="/Aluminio">Aluminio</a></li>
             <li><a class="nav-link scrollto" href="/pvc">PVC</a></li>
          
           </ul>
           </li>
-          <li><a class="nav-link scrollto" href="#portfolio">Obras</a></li>
+          
           <li><a class="nav-link scrollto" href="/contacto">Contacto</a></li>
           <li><a class="getstarted scrollto" href="/login">Usuarios</a></li>
         </ul>
@@ -68,24 +292,25 @@
   <!-- End Header -->
 
   <!-- ======= FOTOS COMIENZO Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
+  <!-- <section id="hero" class="d-flex align-items-center">
 
 
     <div id="slider">
       <figure>
-        <img src="https://i.imgur.com/Gr2ztHk.jpg" alt="1">
-        <img src="https://i.imgur.com/mRTQZWI.jpg" alt="2">
-        <img src="https://i.imgur.com/A6V73gw.jpg" alt="3">
-        <img src="https://i.imgur.com/8wscpFy.jpg" alt="4">
-        <img src="https://i.imgur.com/EZUqEsj.jpg" alt="5">
+        <img src="https://i.imgur.com/1nrDvGD.png" alt="1">
+        <img src="https://i.imgur.com/DsQ8QmS.png" alt="2">
+        <img src="https://i.imgur.com/6oy4I0G.png" alt="3">
+        <img src="https://i.imgur.com/rv3hfyw.png" alt="4">
+        <img src="https://i.imgur.com/xaOD9rX.png" alt="5">
       </figure>
     </div>
 
 
-  </section>
+  </section> -->
   <!-- End Hero -->
 
   <main id="main">
+
 
     <!-- ======= SECCION ACERCA DE NOSOTROS ======= -->
     <hr size="9px" width="72%" color="red">
@@ -95,10 +320,103 @@
           <h2>NOSOTROS</h2>
         </div>
         <p style="font-size: larger">
-          Somos una empresa con más de 80 años de historia. Comenzamos siendo la primera vidriería de Salta, y con esfuerzo y perseverancia, nos especializamos en instalaciones de vidrios y grandes obras de aluminio y PVC.
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nuestra historia como empresa comenzó hace más de 80 años siendo la primera vidriería de Salta, de a poco y con
+          esfuerzo nos convertimos en más que una vidriería. Fuimos integrando productos, manteniendo siempre nuestro estándar de
+          calidad para llegar a especializarnos en instalaciones de vidrios, carpintería de aluminio y aberturas de PVC.
         </p>
         <br>
+        
       </div>
+<div class="section-title" data-aos="fade-up">
+
+  <div class="container" data-aos="fade-up">
+    <div class="row"style="
+    margin-bottom: 2em;" >
+      <div class="col">
+        <h2 id="subnos" style="color: gray;font-size: x-large;">Misión</h2>
+        <p style="text-align: justify;">Estamos comprometidos en brindar
+          soluciones, a través de nuestros
+          productos innovadores y servicios de
+          calidad, adaptados a cada necesidad.</p>
+      </div>
+      <div class="col">
+        <h2 id="subnos" style="color: gray;font-size: x-large;">Visión</h2>
+        <p style="text-align: justify;">“Ser la mejor opción y superar las
+          expectativas de nuestros clientes”</p>
+      </div>
+      <div class="col">
+        <h2 id="subnos" style="color: gray;font-size: x-large;">Valores</h2>
+        <p style="text-align: justify;">Nuestra filosofía define lo que somos,
+          nuestros principios éticos y profesionales
+          que evidencian nuestra identidad
+          como empresa, son...</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container" data-aos="fade-up">
+  <div class="row">
+    <div class="col my-custom-class" data-aos="fade-right">
+      <img src="https://i.imgur.com/FFDDmm4.png" width="76px" alt="PROXIMIDAD">
+      <h2 id="subnos" style="color: gray;font-size: x-large;margin-bottom: 1.1em;">PROXIMIDAD</h2>
+      <p style="text-align: justify;">La cercanía es nuestro valor diferencial. Nuestros clientes y equipo son familia; sus necesidades son nuestra prioridad, por lo que nos esforzamos en estar cerca, en ser la solución a lo que necesitan.</p>
+    </div>
+    <div class="col my-custom-class" data-aos="fade-up">
+      <img src="https://i.imgur.com/QXwxwrG.png"  width="76px"  alt="RESPETO">
+      <h2 id="subnos" style="color: gray;font-size: x-large;margin-bottom: 1.1em;">RESPETO</h2>
+      <p style="text-align: justify;">Creemos que las relaciones humanas hacen a nuestra organización, es por ello que elegimos el respeto como base, para conectar con un otro.</p>
+    </div>
+    <div class="col my-custom-class" data-aos="fade-up">
+      <img src="https://i.imgur.com/HgGxKqn.png"  width="76px"  alt="HONESTIDAD">
+      <h2 id="subnos" style="color: gray;font-size: x-large;margin-bottom: 1.1em;">HONESTIDAD</h2>
+      <p style="text-align: justify;">Este valor nos acompaña desde nuestros comienzos y sostenemos que es la mejor manera de cultivar lazos duraderos.</p>
+    </div>
+    <div class="col my-custom-class" data-aos="fade-left">
+      <img src="https://i.imgur.com/m1la5D9.png" width="76px"  alt="COMPROMISO">
+      <h2 id="subnos" style="color: gray;font-size: x-large;margin-bottom: 1.1em;">COMPROMISO</h2>
+      <p style="text-align: justify;">Entendemos que la manera de trabajar es a través del compromiso real. Buscamos involucrarnos en cada proceso y así brindar la mejor experiencia a nuestros clientes.</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- <style>
+  /* Estilos para el contenedor */
+.container #top {
+  margin-top: 50px;
+}
+
+/* Estilos para las columnas */
+.col #top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Estilos para las imágenes */
+img #top{
+  width: 100%;
+  height: auto;
+  margin: auto;
+  margin-bottom: 10px;  
+}
+
+/* Estilos para los títulos */
+h3 #top {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+/* Estilos para los subtítulos */
+p #top {
+  font-size: 16px;
+}
+
+</style> -->
         </section> 
 
 
@@ -107,11 +425,11 @@
     
             <div class="row">
               <div class="col-lg-5 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
-                <img src="img/index2/why-us.png" id="mapa" style="animation: up-down 2s ease-in-out infinite alternate-reverse both;" class="img-fluid" alt="">
+                <img src="img/index2/why-us.png" id="mapa"  class="img-fluid" alt="">
               </div>
               <div class="col-lg-5 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
                 <div class="section-title">
-                  <h2><br><br>TRABAJAMOS EN TODO EL PAÍS </h2>
+                  <h2>TRABAJAMOS EN TODO EL PAÍS </h2>
                 <p class="fst-italic" style="font-size: larger;">
                   Nuestro éxito está relacionado con varios factores, ninguno aleatorio; el más destacable es nuestro
                   equipo de trabajo, desde el personal de obra, que en su gran mayoría está hace años, hasta nuestros
@@ -157,16 +475,16 @@
                   <img class="simbolomas1" src="https://i.imgur.com/gy8gXie.png" alt="">
                   <span class="count" data-count="400000">0</span>
                   <span class="count-label">
-                    <h3>Metros de Aluminio procesado</h3>
+                    <h3>Metros lineales <br> Aluminio procesado </h3>
                   </span>
                 </div>
               </div>
               <div class="col-sm-3">
                 <div class="counter">
                   <img class="simbolomas1" src="https://i.imgur.com/gy8gXie.png" alt="">
-                  <span class="count" data-count="10000">0</span>
+                  <span class="count" data-count="100000">0</span>
                   <span class="count-label">
-                    <h3>Metros de PVC procesado</h3>
+                    <h3>Metros lineales <br> PVC procesado</h3>
                   </span>
                 </div>
               </div>
@@ -211,37 +529,40 @@
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-img">
-              <img src="https://i.imgur.com/HDdPSR8.jpg" class="img-fluid" alt="">
+             
+             <a href="https://i.imgur.com/HDdPSR8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Aeropuerto | Bariloche"> <img src="https://i.imgur.com/HDdPSR8.jpg" class="img-fluid" alt=""></a>
+
             </div>
             <div class="portfolio-info">
               <h4>AEROPUERTO</h4>
               <p>San Carlos de Bariloche | Rio Negro </p>
-              <a href="https://i.imgur.com/HDdPSR8.jpg" data-gallery="portfolioGallery"
-                class="portfolio-lightbox preview-link" title="Aeropuerto | Bariloche"><iconify-icon icon="line-md:image-twotone" width="30" height="30"></iconify-icon></a>
                </div>
           </div>
        
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-img">
-              <img src="https://i.imgur.com/coDzDuR.jpg" class="img-fluid" alt="">
+               <a href="https://i.imgur.com/coDzDuR.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="EL PUNTO | SAN LORENZO CHICO">
+                <img src="https://i.imgur.com/coDzDuR.jpg" class="img-fluid" alt="">
+               </a>
             </div>
             <div class="portfolio-info">
               <h4>EL PUNTO</h4>
               <p>San Lorenzo | Salta</p>
-              <a href="https://i.imgur.com/coDzDuR.jpg" data-gallery="portfolioGallery"
-                class="portfolio-lightbox preview-link" title="EL PUNTO | SAN LORENZO CHICO"><iconify-icon icon="line-md:image-twotone" width="30" height="30"></iconify-icon></a>
+        
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-img">
-              <img src="https://i.imgur.com/R2YcIfv.jpg" class="img-fluid" alt="">
+              <a href="https://i.imgur.com/R2YcIfv.jpg" data-gallery="portfolioGallery"
+              class="portfolio-lightbox preview-link" title="ALTO NOA | MOI">
+                <img src="https://i.imgur.com/R2YcIfv.jpg" class="img-fluid" alt="">
+              </a>
             </div>
             <div class="portfolio-info">
               <h4>MOOI</h4>
               <p>Mooi | Salta</p>
-              <a href="https://i.imgur.com/R2YcIfv.jpg" data-gallery="portfolioGallery"
-                class="portfolio-lightbox preview-link" title="ALTO NOA | MOI"><iconify-icon icon="line-md:image-twotone" width="30" height="30"></iconify-icon></a>
             </div>
           </div>
 
@@ -274,48 +595,58 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
           <div class="portfolio-img">
+            <a href="https://i.imgur.com/1ZXipRv.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="USINA Cultural | SALTA">
           <img src="https://i.imgur.com/1ZXipRv.jpg" class="img-fluid" alt="">
+            </a>
           </div>
           <div class="portfolio-info">
           <h4>USINA CULTURAL</h4>
-          <p>Usina Cultural - Salta</p>
-          <a href="https://i.imgur.com/1ZXipRv.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="USINA Cultural | SALTA"><iconify-icon icon="line-md:image-twotone" width="30" height="30"></iconify-icon></a>
+          <p>Usina Cultural | Salta</p>
+       
   </div>
 </div>
 <!-- FIN -->
-<!-- SAN LO -->
+
 <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-  <div class="portfolio-img"><img src="https://i.imgur.com/679mzHS.jpg" class="img-fluid" alt="">
+  <div class="portfolio-img">
+    <a href="https://i.imgur.com/679mzHS.jpg" data-gallery="portfolioGallery"
+    class="portfolio-lightbox preview-link" title="Praderas del Bosque | Salta">
+    <img src="https://i.imgur.com/679mzHS.jpg" class="img-fluid" alt="">
+  </a>
   </div>
   <div class="portfolio-info">
-    <h4>OBRA CARACCIO</h4>
+    <h4>OBRA PRADERAS</h4>
     <p>Praderas del Bosque | Salta</p>
-    <a href="https://i.imgur.com/679mzHS.jpg" data-gallery="portfolioGallery"
-      class="portfolio-lightbox preview-link" title="Praderas del Bosque | Salta"><iconify-icon icon="line-md:image-twotone" width="30" height="30"></iconify-icon></a>
+  
   </div>
 </div>
 
 <!-- 2 -->
 <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-  <div class="portfolio-img"><img src="https://i.imgur.com/Cf08v0E.jpg" class="img-fluid" alt="">
+  <div class="portfolio-img">
+    <a href="https://i.imgur.com/Cf08v0E.jpg" data-gallery="portfolioGallery"
+    class="portfolio-lightbox preview-link" title="CASA PARTICULAR | Salta">
+    <img src="https://i.imgur.com/Cf08v0E.jpg" class="img-fluid" alt="">
+    </a>
   </div>
   <div class="portfolio-info">
     <h4>CASA PARTICULAR</h4>
     <p>Casa | Salta</p>
-    <a href="https://i.imgur.com/Cf08v0E.jpg" data-gallery="portfolioGallery"
-      class="portfolio-lightbox preview-link" title="CASA PARTICULAR | Salta"><iconify-icon icon="line-md:image-twotone" width="30" height="30"></iconify-icon></a>
+ 
   </div>
 </div>
-<!-- INICIO CASA -->
+<!-- torres -->
       <div class="col-lg-4 col-md-6 portfolio-item filter-card">
   <div class="portfolio-img">
+    <a href="https://i.imgur.com/fpLCfqq.jpg" data-gallery="portfolioGallery"
+    class="portfolio-lightbox preview-link" title="TORRES BALCARCE | Salta">
     <img src="https://i.imgur.com/fpLCfqq.jpg" class="img-fluid" alt="">
+    </a>
   </div>
   <div class="portfolio-info">
     <h4>TORRES BALCARCE</h4>
     <p>Balcarce | Salta</p>
-    <a href="https://i.imgur.com/fpLCfqq.jpg" data-gallery="portfolioGallery"
-      class="portfolio-lightbox preview-link" title="TORRES BALCARCE | Salta"><iconify-icon icon="line-md:image-twotone" width="30" height="30"></iconify-icon></a>
+ 
   </div>
       </div>
 
@@ -330,7 +661,7 @@
               <div class="row" data-aos="zoom-in">
           
                 <div class="col-lg-2 col-md-4 col-4 d-flex align-items-center justify-content-center">
-                  <img src="img/index2/clients/client-1.png" class="client-img1"  alt="Proveedor 1">
+                  <img src="img/index2/clients/client-1.png" class="client-img1" style="width: 53px;"  alt="Proveedor 1">
                 </div>
           
                 <div class="col-lg-2 col-md-4 col-4 d-flex align-items-center justify-content-center">
@@ -357,7 +688,9 @@
             </div>
           </section>
           
-   
+    
+  
+        
   </main>
   <!-- End #main -->
 
@@ -374,7 +707,7 @@
               Salta, Capital<br>
               Argentina <br><br>
               <strong>Phone:</strong> +54 0387 - 4234500<br>
-              <strong>Email:</strong> info@example.com<br>
+           
             </p>
           </div>
 
@@ -392,7 +725,7 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Otros Servicios</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Chat Online</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/reparacion">Chat Online</a></li>
               <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
@@ -406,10 +739,10 @@
               que se distinga por proporcionar una calidad de productos y servicios de excelencia a sus clientes.
             </p>
             <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> -->
+              <a href="https://web.facebook.com/castellaniaberturasyvidrios" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="https://www.instagram.com/castellaniaberturasyvidrios/" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
               <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
             </div>
           </div>
@@ -417,16 +750,20 @@
         </div>
       </div>
     </div>
-   
-    
+    <div class="iso">
+      <img src="https://i.imgur.com/bcH10xa.png" alt="" width="10%">
+    </div>
     <div class="container footer-bottom clearfix">
+      
       <div class="copyright">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&copy; Copyright <strong><span>Castellani</span></strong>. All Rights Reserved
+        
+        &copy; Copyright <strong><span>Castellani</span></strong>. All Rights Reserved
         &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
         &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
         &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
         
-        <button><a class="getstarted scrollto" href="/">Trabaja con Nosotros</a></button>
+        <button class="getstarted scrollto" onclick="location.href='/trabaja';">Trabaja con Nosotros</button>
+
       </div>
       
       <div class="credits">
@@ -448,10 +785,14 @@
   <script src="css/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="css/swiper/swiper-bundle.min.js"></script>
   <script src="css/waypoints/noframework.waypoints.js"></script>
-  <script src="css/php-email-form/validate.js"></script>
+  
+ 
 
   <!-- Template Main JS File -->
   <script src="js/main.js"></script>
+  <script src="js/jquery.js"></script>
+
+	
 
 </body>
 <!-- Scrip para el conteo -->
@@ -517,6 +858,8 @@ countElements.forEach(function(element) {
 
 
 </script>
+
+ 
 
 <!-- scrip iconos -->
 <script src="https://code.iconify.design/iconify-icon/1.0.5/iconify-icon.min.js"></script>

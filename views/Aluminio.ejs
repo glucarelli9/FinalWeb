@@ -8,9 +8,11 @@
   <meta name="description" content="Web index Castellani Vidrios">
   <meta name="author" content="Castellani Vidrios">
 
+  
   <!-- Favicons -->
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-
+  <link rel="icon" type="image/png" sizes="16x16"  href="img/favicon-16x16.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
   <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
@@ -32,36 +34,41 @@
 </head>
 
 <body>
-  <!-- ======= NAVBAR ======= -->
-  <header id="header" class="fixed-top ">
+   <!-- ======= NAVBAR ======= -->
+   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
       <h1 class="logo me-auto"><a href="/">Castellani</a></h1>
-
+ 
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto" href="/">Inicio</a></li>
           <li><a class="nav-link scrollto" href="/">Nosotros</a></li>
-          <li class="dropdown"><a href="/vidrios">Vidrios</a>
-            <ul>
-              <li><a href="/dvh">DVH</a></li>
-            </ul>
-          </li>
-          <li class="dropdown"><a>Perfileria</a>
-            <ul>
-              <li><a class="nav-link scrollto active" href="/Aluminio">Aluminio</a></li>
-              <li><a class="nav-link scrollto" href="/Pvc">PVC</a></li>
-            </ul>
-          </li>
           <li><a class="nav-link scrollto" href="/">Obras</a></li>
+          <li class="dropdown"><a href="/vidrios">Vidrios</a>
+          <ul>
+            <li><a href="/vidrios">Distribucion VASA</a></li>
+            <li><a href="/dvh">DVH Climanet</a></li>
+          </ul>
+          </li>
+
+          <li class="dropdown active"><a class="active" href="/Aluminio">Perfileria</a>
+          <ul>
+            <li><a class="nav-link scrollto active" href="/Aluminio">Aluminio</a></li>
+            <li><a class="nav-link scrollto" href="/pvc">PVC</a></li>
+         
+          </ul>
+          </li>
+          
           <li><a class="nav-link scrollto" href="/contacto">Contacto</a></li>
           <li><a class="getstarted scrollto" href="/login">Usuarios</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
+      </nav><!-- .navbar -->
+
     </div>
   </header>
-  <!-- ======= FIN NAVBAR ======= -->
+  <!-- End Header -->
   <section id="hero" class="d-flex align-items-center">
 
 
@@ -108,7 +115,7 @@
 
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web text-center"
-            style="background-color: rgba(105, 105, 105, 0.205);padding-left: inherit;">
+            style="padding-left: inherit;">
             <div class="portfolio-img"><img
                 src="https://www.hydro.com/globalassets/01-products--services/building-systems/argentina/img_4956.jpg"
                 style="width: 91%;" class="img-fluid" alt=""></div>
@@ -135,7 +142,7 @@
 
           </div>
           <div class="col-lg-4 col-md-6 portfolio-item filter-app text-center"
-            style="background-color: rgba(105, 105, 105, 0.205);padding-left: inherit;">
+            style="padding-left: inherit;">
             <div class="portfolio-img"><img
                 src="https://www.hydro.com/globalassets/01-products--services/building-systems/argentina/_dsc4556.jpg"
                 class="img-fluid" alt=""></div>
@@ -181,7 +188,7 @@
         <div class="row portfolio-container">
 
           <div class="col-lg-6 col-md-6 portfolio-item filter-app text-center"
-            style="background-color: rgba(105, 105, 105, 0.205);padding-left: inherit;">
+            style="padding-left: inherit;">
             <div class="portfolio-img"><img src="https://ralaluminio.com.ar/wp-content/uploads/2018/09/vent2.1.jpg"
                 class="img-fluid" alt=""></div>
             <a href="https://ralaluminio.com.ar/wp-content/uploads/2018/09/vent2.1.jpg" data-gallery="portfolioGallery"
@@ -196,7 +203,7 @@
 
 
           <div class="col-lg-6 col-md-6 portfolio-item filter-web text-center"
-            style="background-color: rgba(105, 105, 105, 0.205);padding-left: inherit;">
+            style="padding-left: inherit;">
             <div class="portfolio-img"><img
                 src="https://aberturasabraham.com.ar/images/portfolio/aberturas_abraham_residencia_aluar_a30_corrediza.jpg"
                 style="width: 98%;" class="img-fluid" alt=""></div>
@@ -216,27 +223,11 @@
 
   </main>
 
-
   <!-- ======= Footer ======= -->
   <footer id="footer">
-
-    <!-- <div class="footer-newsletter">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-6">
-          <h4>Join Our Newsletter</h4>
-          <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-          <form action="" method="post">
-            <input type="email" name="email"><input type="submit" value="Subscribe">
-          </form>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
     <div class="footer-top">
-      <div class="container">
-        <div class="row">
+      <div class="container ">
+        <div class="row ">
 
           <div class="col-lg-3 col-md-6 footer-contact">
             <h3>Castellani</h3>
@@ -255,8 +246,8 @@
               <li><i class="bx bx-chevron-right"></i> <a href="#">Inicio</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Acerca de</a></li>
               <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li> -->
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li> -->
             </ul>
           </div>
 
@@ -265,16 +256,15 @@
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Chat Online</a></li>
               <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li> -->
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li> -->
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Redes Sociales</h4>
-            <p>Ser una Empresa lider, solida, confiable, con rentabilidad sostenida y en continuo crecimiento en el
-              mercado que participamos
+            <p>Ser una Empresa lider, solida, confiable, con rentabilidad sostenida y en continuo crecimiento en el mercado que participamos
               que se distinga por proporcionar una calidad de productos y servicios de excelencia a sus clientes.
             </p>
             <div class="social-links mt-3">
@@ -289,26 +279,29 @@
         </div>
       </div>
     </div>
-
-
+    <div class="iso">
+      <img src="https://i.imgur.com/bcH10xa.png" alt="" width="10%">
+    </div>
     <div class="container footer-bottom clearfix">
+      
       <div class="copyright">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&copy; Copyright
-        <strong><span>Castellani</span></strong>. All Rights Reserved
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-
+        
+        &copy; Copyright <strong><span>Castellani</span></strong>. All Rights Reserved
+        &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        
         <button><a class="getstarted scrollto" href="/">Trabaja con Nosotros</a></button>
       </div>
-
+      
       <div class="credits">
         Designed by <a href="https://wa.me/+5493874892669"><b style="    color: #ededede8;">Gianfranco</b></a>
       </div>
     </div>
-
+  
   </footer>
   <!-- End Footer -->
+
 
   <!-- Vendor JS Files -->
   <script src="css/aos/aos.js"></script>
@@ -317,7 +310,7 @@
   <script src="css/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="css/swiper/swiper-bundle.min.js"></script>
   <script src="css/waypoints/noframework.waypoints.js"></script>
-  <script src="css/php-email-form/validate.js"></script>
+
 
   <!-- Template Main JS File -->
   <script src="js/main.js"></script>

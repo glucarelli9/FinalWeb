@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
@@ -23,7 +24,11 @@
     "jspdf": "^2.5.1",
     "multer": "^1.4.5-lts.1",
     "mysql": "^2.18.1",
-    "socket.io": "^4.5.4"
+    "nodemailer": "^6.9.1",
+    "socket.io": "^4.5.4",
+    "spin": "^0.0.1",
+    "sweetalert": "^2.1.2",
+    "sweetalert2": "^11.7.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"

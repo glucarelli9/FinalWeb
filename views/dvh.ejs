@@ -8,9 +8,10 @@
     <title>Castellani | DVH</title>
     <meta name="description" content="Web index Castellani Vidrios">
     <meta name="author" content="Castellani Vidrios">
-    <!-- Favicons -->
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="16x16"  href="img/favicon-16x16.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
     <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
@@ -32,43 +33,50 @@
 
 <body>
 
-    <!-- ======= NAVBAR ======= -->
-    <header id="header" class="fixed-top ">
-        <div class="container d-flex align-items-center">
+     <!-- ======= NAVBAR ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
 
-            <h1 class="logo me-auto"><a href="/">Castellani</a></h1>
+      <h1 class="logo me-auto"><a href="/">Castellani</a></h1>
+ 
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="/">Inicio</a></li>
+          <li><a class="nav-link scrollto" href="/">Nosotros</a></li>
+          <li><a class="nav-link scrollto" href="/">Obras</a></li>
+          <li class="dropdown"><a class="active" href="/vidrios">Vidrios</a>
+          <ul>
+            <li><a href="/vidrios">Distribucion VASA</a></li>
+            <li class="active"><a class="active" href="/dvh">DVH Climanet</a></li>
+          </ul>
+          </li>
 
-            <nav id="navbar" class="navbar">
-                <ul>
-                    <li><a class="nav-link scrollto" href="/">Inicio</a></li>
-                    <li><a class="nav-link scrollto" href="/">Nosotros</a></li>
-                    <li class="dropdown"><a class="nav-link scrollto active" href="/vidrios">Vidrios</a>
-                        <ul>
-                            <li><a class="nav-link scrollto active" href="/dvh">DVH</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown"><a href="">Perfileria</a>
-                        <ul>
-                            <li><a class="nav-link scrollto" href="/Aluminio">Aluminio</a></li>
-                            <li><a class="nav-link scrollto" href="/Pvc">PVC</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="nav-link scrollto" href="/">Obras</a></li>
-                    <li><a class="nav-link scrollto" href="/contacto">Contacto</a></li>
-                    <li><a class="getstarted scrollto" href="/login">Usuarios</a></li>
-                </ul>
-                <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav>
-        </div>
-    </header>
-    <!-- ======= FIN NAVBAR ======= -->
+          <li class="dropdown"><a href="#">Perfileria</a>
+          <ul>
+            <li><a class="nav-link scrollto" href="/Aluminio">Aluminio</a></li>
+            <li><a class="nav-link scrollto" href="/pvc">PVC</a></li>
+         
+          </ul>
+          </li>
+          
+          <li><a class="nav-link scrollto" href="/contacto">Contacto</a></li>
+          <li><a class="getstarted scrollto" href="/login">Usuarios</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header>
+  <!-- End Header -->
     <main id="main">
 
         <section id="hero" class="d-flex align-items-center">
             <div class="imagenDVH">
-                <img src="https://i.imgur.com/BIvp8ay.jpg"
+                <img src="https://i.imgur.com/UULsMlJ.jpg"
                     alt="Banner">
             </div>
+           
+            <img class="logoclimanet" src="https://i.imgur.com/i6wdFqA.png" alt="Climanet">
            </section>
 
         <hr size="9px" width="72%" color="red">
@@ -78,10 +86,10 @@
               <h2>DOBLE VIDRIO HERMÉTICO</h2>
             </div>
             <p style="font-size: larger">
-                El Doble Vidriado Hermético Ekoglass es un componente prefabricado compuesto por un conjunto de dos o más
-            vidrios float planos paralelos, separados entre sí por un espaciador, herméticamente sellados a lo largo de todo su perímetro,
-            que encierra en su interior una cámara estanca de aire deshidratado o gases inertes para mejorar el comportamiento térmico
-y acústico (Normas IRAM 12598-1).
+              La Red de procesadores del doble vidrio hermético Climanet produce bajo estrictas normas de aseguramiento de la
+              calidad y con materias primas de primera línea, lo que consolida un producto final de alto standard. <br> <br>
+              La trayectoria y experiencia acumulada desde 1993 permiten satisfacer los requerimientos más exigentes en arquitectura
+              residencial y comercial. Ambos factores posibilitan otorgar una garantía de 10 años a toda la línea de DVH Climanet.
             </p>
             <br>
           </div>
@@ -127,171 +135,198 @@ y acústico (Normas IRAM 12598-1).
             </div>
           </section> 
 
-          <section id="about" class="about">
-            <div class="container" style="padding-top: 4em;">
-              <div class="row">
-                <div class="col-md-6">
-                  <h2 style="font-family:'Open Sans', sans-serif; color: #444444;">Beneficios</h2>
-                  <ul class="beneficios">
-                    <li> <b>Aumenta en más del 100% el aislamiento térmico.</b></li>
-                    <li><b>Mejora el aislamiento acústico.</b></li>
-                    <li><b>Disminuye hasta un 70% las pérdidas de calor a través del vidrio, ahorrando energía de climatización.</b></li>
-                    <li><b>Reduce la condensación de humedad y el empañado.</b></li>
-                    <li><b>Anula el efecto de “muro frío” aumentando el confort.</b></li>
-                    <li><b>Brinda control solar y disminuye el resplandor.</b></li>
-                  </ul>
-                </div>
-                <div class="col-md-6">
-                  <h2 style="font-family:'Open Sans', sans-serif; color: #444444;">Seguridad</h2>
-                  <p>En DVH con superficie mayores a 1.50 m2 deben usarse vidrios seguros para las personas:</p>
-                  <ul class="seguridad">
-                    <li><b>Vidrios de grandes dimensiones</b></li>
-                    <li><b>Puertas Ventanas</b></li>
-                    <li><b>Vidriado baja altura</b></li>
-                    <li><b>Vidriado al vacío</b></li>
-                    <li><b>Techos</b></li>
-                  </ul>
-                </div>
-              </div>
-              <p style="padding-top: 4em;font-family: 'Open Sans', sans-serif; color: #444444; font-size: larger; margin: 0px 0px 4em;">Los DVH ubicados en aberturas susceptibles de impacto humano, como por ejemplo puertas balcón y accesos vidriados
-                en general, deben fabricarse con vidrios laminados y/o templados para evitar accidentes. En el caso de vidriados con un
-                ángulo mayor de 15º respecto de su vertical, siempre deben usarse con vidrios de seguridad laminados en la cara que mira
-                hacia el interior de un ambiente. El DVH también brinda seguridad y protección al hogar, contra robo ó ingreso forzado, incorporando
-                a éste vidrios laminados con PVB mayor a 0,76 mm.</p>
-            </div>
-          
-            <style>
-              .beneficios li:before,
-              .seguridad li:before {
-                color: red;
-              }
-              .beneficios b,
-              .seguridad b {
-                color: #444444;
-              }
-              </style>
+         
+<section id="cta">
+  <style>
+		.title {
+			
+			font-weight: bold;
+			margin-top: 20px;
+			margin-bottom: -10%;
+		}
+
+
+		.center-image {
+      display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 75vh;
+		}
+
+		.center-image img {
+      max-height: 100%;
+    max-width: 100%;
+    width: 33em;
+		}
+	</style>
+  <div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-6">
+				<h2 class="title left-title">CAMARA DE AIRE
+          <img src="https://i.imgur.com/4Fkgh1a.png" alt="" style="position: absolute;
+              bottom: -0.7em;
+          left: 9em;
+          width: 29%;">
+           </h2>
+
+         <h2 class="title left-title2"> VIDRIO A<br> ELECCION 
+          <img src="https://i.imgur.com/5ioMaWy.png" alt="" style="    position: absolute;
+          bottom:  0.1em;
+          left: 8.4rem;
+          width: 50%;">
+        </h2>
+        </div>
+			<div class="col-sm-6">
+				<h2 class="title right-title">
+          <img src="https://i.imgur.com/lZFKRWK.png" style="position: absolute;
+          width: 27%;
+          right: 97%;
+    bottom: -71%;" alt="">
+          SEPARADOR TÉRMICO
+          </h2>
+          <h2 class="title right-title2">
+          <img src="https://i.imgur.com/HxGg5cW.png" style="     position: absolute;
+          width: 22%;
+          right: 99%;
+          bottom: -46%;" alt="">
+          ESQUINAS CONTINUAS
+          </h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12 center-image">
+				<img src="https://i.imgur.com/Afq4K4h.png" alt="Imagen centrada">
+			</div>
+		</div>
+	</div>
+</section>
+  <section>
+
+  
+  <div class="container" id="abajo">
+    <style>
+      .image{
+			float: left;
+			margin-right: 20px;
+			max-width: 200px;
+			height: auto;
+		}
+
+		.texto {
+			font-size: 18px;
+			line-height: 1.5;
+      font-weight: bold;
+      color: gray;
+		}
+    </style>
+    <img src="https://i.imgur.com/0FQSXbm.png" alt="Imagen a la izquierda" style="float: left;
+    margin-right: 20px; width: 4em;">
+    <strong><h2>Aislación</h2></strong>   
+		<p class="texto"> Los DVH te proporcionan la mejor aislación ante ruidos molestos del exterior y evitan la ﬁltración térmica.</p>
+    <br>
+    <img src="https://i.imgur.com/HVVC5mv.png" alt="Imagen a la izquierda" style="float: left;
+    margin-right: 20px; width: 4em;">
+    <b><h2>Seguridad Ante Accidentes</h2></b>   
+		<p class="texto">Los vidrios laminados evitan las astillas cortantes ante cualquier accidente, garantizando la seguridad de tu familia.</p>
+    <br>
+    <img src="https://i.imgur.com/lZFKRWK.png" alt="Imagen a la izquierda" style="float: left;
+    margin-right: 20px; width: 4em;">
+    <b><h2>Separadores</h2></b>   
+		<p class="texto">Puede ser de espuma orgánica ﬂexible o de silicona, que proporciona un excelente aislamiento acústico y térmico.</p>
+    <br><img src="https://i.imgur.com/vmBZLvB.png" alt="Imagen a la izquierda" style="float: left;
+    margin-right: 20px; width: 4em;">
+    <b><h2>Vapor De Humedad</h2></b>   
+		<p class="texto">Un diseño único que actúa como barrera continua no metálica contra la humedad.</p>
+    <br><img src="https://i.imgur.com/HxGg5cW.png" alt="Imagen a la izquierda" style="float: left;
+    margin-right: 20px; width: 4em;">
+    <b><h2>Esquinas Continuas</h2></b>   
+		<p class="texto">Aumentando la vida útil de tus DVH hasta 20 años. Además su «borde cálido» asegura mayor aislación.</p>
+	</div>
+</section>
           
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-6">
-      <img src="https://i.imgur.com/FU7hWcs.png" alt="DVH" width="60%" class="img-fluid" style="    margin-left: 10%;">
-    </div>
-    <div class="col-md-6"> 
-        <div class="section-title">
-          <h2 class="dvh2">Composición DEL DVH</h2>
-        </div>
-        <style>
-          ul.DVH {
-            counter-reset: item;
-            padding-left: 0;
-            list-style-type:none;
-          }
-          ul.DVH li:before {
-            content: counter(item) ".";
-            counter-increment: item;
-            color: red;
-            font-weight: bold;
-          }
-          ul.DVH li {
-            color: #444444;
-            margin-bottom: 20px;
-          }
-        </style>
-        <ul class="DVH" style="font-size: larger;">
-          <li> Tamiz molecular absorbente de humedad. </li>
-          <li> Sellador primario (barrera de vapor). </li>
-          <li> Perfil separador.</li>
-          <li> Sellador secundario. </li>
-          <li> Vidrios según requerimiento de resistencia, seguridad y propiedades de transmisión.</li>
-        </ul>
-    </div>
-    <p style="padding-top: 4em;font-family: 'Open Sans', sans-serif; color: #444444; font-size: larger; margin: 0px 0px 16px;">El DVH siempre se fabrica a medida y llega a la obra o al fabricante de aberturas listo para instalar en las ventanas. El
-      espesor y el tipo de vidrios a emplear dependen de la presión del viento y del tamaño del paño. También es función de los
-      requerimientos de control solar, aislamiento acústico y especificaciones de seguridad y protección.</p>
-      <p style="font-family: 'Open Sans', sans-serif; color: #444444; font-size: larger; margin: 0px 0px 16px;">El espesor total de un DVH resulta de la suma del espesor de los vidrios empleados, más el ancho de la cámara de aire, cuyos
-      espesores usuales son 9, 12 y 15 mm. El espesor total más empleado en la construcción varía, según sus dimensiones, entre 15
-      y 28 mm. Cuando la dimensión del paño es importante puede llegar a tener espesores de hasta 35 mm. El peso de un DVH varía
-      desde 15 hasta 50 ó 60 Kg/m2.</p> 
-  </div>
-  
 
 </div>
 
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container ">
+        <div class="row ">
 
-<footer id="footer">
-  <div class="footer-top">
-    <div class="container ">
-      <div class="row ">
-
-        <div class="col-lg-3 col-md-6 footer-contact">
-          <h3>Castellani</h3>
-          <p>
-            A4402 La Rioja 465 <br>
-            Salta, Capital<br>
-            Argentina <br><br>
-            <strong>Phone:</strong> +54 0387 - 4234500<br>
-            <strong>Email:</strong> info@example.com<br>
-          </p>
-        </div>
-
-        <div class="col-lg-3 col-md-6 footer-links">
-          <h4>Accesos rapidos</h4>
-          <ul>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Inicio</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Acerca de</a></li>
-            <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li> -->
-          </ul>
-        </div>
-
-        <div class="col-lg-3 col-md-6 footer-links">
-          <h4>Otros Servicios</h4>
-          <ul>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Chat Online</a></li>
-            <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li> -->
-          </ul>
-        </div>
-
-        <div class="col-lg-3 col-md-6 footer-links">
-          <h4>Redes Sociales</h4>
-          <p>Ser una Empresa lider, solida, confiable, con rentabilidad sostenida y en continuo crecimiento en el mercado que participamos
-            que se distinga por proporcionar una calidad de productos y servicios de excelencia a sus clientes.
-          </p>
-          <div class="social-links mt-3">
-            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Castellani</h3>
+            <p>
+              A4402 La Rioja 465 <br>
+              Salta, Capital<br>
+              Argentina <br><br>
+              <strong>Phone:</strong> +54 0387 - 4234500<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
           </div>
-        </div>
 
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Accesos rapidos</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Inicio</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Acerca de</a></li>
+              <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li> -->
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Otros Servicios</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Chat Online</a></li>
+              <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li> -->
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Redes Sociales</h4>
+            <p>Ser una Empresa lider, solida, confiable, con rentabilidad sostenida y en continuo crecimiento en el mercado que participamos
+              que se distinga por proporcionar una calidad de productos y servicios de excelencia a sus clientes.
+            </p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
-  </div>
- 
-  
-  <div class="container footer-bottom clearfix">
-    <div class="copyright">
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&copy; Copyright <strong><span>Castellani</span></strong>. All Rights Reserved
-      &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-      &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-      &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    <div class="iso">
+      <img src="https://i.imgur.com/bcH10xa.png" alt="" width="10%">
+    </div>
+    <div class="container footer-bottom clearfix">
       
-      <button><a class="getstarted scrollto" href="/">Trabaja con Nosotros</a></button>
+      <div class="copyright">
+        
+        &copy; Copyright <strong><span>Castellani</span></strong>. All Rights Reserved
+        &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        
+        <button><a class="getstarted scrollto" href="/">Trabaja con Nosotros</a></button>
+      </div>
+      
+      <div class="credits">
+        Designed by <a href="https://wa.me/+5493874892669"><b style="    color: #ededede8;">Gianfranco</b></a>
+      </div>
     </div>
-    
-    <div class="credits">
-      Designed by <a href="https://wa.me/+5493874892669"><b style="    color: #ededede8;">Gianfranco</b></a>
-    </div>
-  </div>
+  
+  </footer>
+  <!-- End Footer -->
 
-</footer>
 
 
     </main>
@@ -305,7 +340,7 @@ y acústico (Normas IRAM 12598-1).
 <script src="css/isotope-layout/isotope.pkgd.min.js"></script>
 <script src="css/swiper/swiper-bundle.min.js"></script>
 <script src="css/waypoints/noframework.waypoints.js"></script>
-<script src="css/php-email-form/validate.js"></script>
+
 
 <!-- Template Main JS File -->
 <script src="js/main.js"></script>

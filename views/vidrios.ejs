@@ -8,7 +8,9 @@
     <meta name="description" content="Web index Castellani Vidrios">
   <meta name="author" content="Castellani Vidrios">
   <!-- Favicons -->
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="16x16"  href="img/favicon-16x16.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
 
   <!-- Google Fonts -->
   <link
@@ -30,46 +32,61 @@
 </head>
 <body>
 
-  <!-- ======= NAVBAR ======= -->
-  <header id="header" class="fixed-top ">
-    <div class="container d-flex align-items-center">
-
-      <h1 class="logo me-auto"><a href="/">Castellani</a></h1>
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto" href="/">Inicio</a></li>
-          <li><a class="nav-link scrollto" href="/">Nosotros</a></li>
-          <li class="dropdown"><a class="nav-link scrollto active" href="/vidrios">Vidrios</a>
+    <!-- ======= NAVBAR ======= -->
+    <header id="header" class="fixed-top ">
+      <div class="container d-flex align-items-center">
+  
+        <h1 class="logo me-auto"><a href="/">Castellani</a></h1>
+   
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="nav-link scrollto" href="/">Inicio</a></li>
+            <li><a class="nav-link scrollto" href="/">Nosotros</a></li>
+            <li><a class="nav-link scrollto" href="/">Obras</a></li>
+            <li class="dropdown"><a class="active" href="/vidrios">Vidrios</a>
             <ul>
-              <li><a href="/dvh">DVH</a></li>
+              <li><a href="/vidrios">Distribucion VASA</a></li>
+              <li><a href="/dvh">DVH Climanet</a></li>
             </ul>
-          </li>
-          <li class="dropdown"><a href="">Perfileria</a>
+            </li>
+  
+            <li class="dropdown"><a href="/Aluminio">Perfileria</a>
             <ul>
               <li><a class="nav-link scrollto" href="/Aluminio">Aluminio</a></li>
-              <li><a class="nav-link scrollto" href="/Pvc">PVC</a></li>
+              <li><a class="nav-link scrollto" href="/pvc">PVC</a></li>
+           
             </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="/">Obras</a></li>
-          <li><a class="nav-link scrollto" href="/contacto">Contacto</a></li>
-          <li><a class="getstarted scrollto" href="/login">Usuarios</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
-    </div>
-  </header>
+            </li>
+            
+            <li><a class="nav-link scrollto" href="/contacto">Contacto</a></li>
+            <li><a class="getstarted scrollto" href="/login">Usuarios</a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+  
+      </div>
+    </header>
+    <!-- End Header -->
   <!-- ======= FIN NAVBAR ======= -->
   <main id="main">
     <section id="hero" class="d-flex align-items-center">
+      <div>
+        <figure>
+          <img src="https://i.imgur.com/D0MKRCF.jpg" style="text-align: left; width: 133%; float: left; margin: 0;" width="20%" alt>
+          <img class="image4" src=".\img\index2\clients\client-4.png"  width="133%" alt="VASA">
+        </figure>
+      </div>
+    
+      </section>   
+    <!-- <section id="hero" class="d-flex align-items-center">
 
-
+      <figure>
         <div class="imagenV">
           <img src="https://s3.amazonaws.com/halaxia-backend-production-storage/environments/78/backgrounds/167e6704539dc7f42351837fcf1bc37e.jpeg"
-            alt="Banner">
+            alt="Banner" style="text-align: left; width: 100%; float: left; margin: 0;">
         </div>
-        <img class="image4" src=".\img\index2\clients\client-4.png" width="20%" alt="VASA">
-    
+        <img class="image4" src=".\img\index2\clients\client-4.png"  width="20%" alt="VASA">
+      </figure> -->
     </section>
   <!-- Seccion Vidrios -->
     <hr size="9px" width="72%" color="red">
@@ -131,7 +148,7 @@
           </div>
 
       </section>
-<!-- ======= Footer ======= -->
+  <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="footer-top">
       <div class="container ">
@@ -187,11 +204,14 @@
         </div>
       </div>
     </div>
-   
-    
+    <div class="iso">
+      <img src="https://i.imgur.com/bcH10xa.png" alt="" width="10%">
+    </div>
     <div class="container footer-bottom clearfix">
+      
       <div class="copyright">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&copy; Copyright <strong><span>Castellani</span></strong>. All Rights Reserved
+        
+        &copy; Copyright <strong><span>Castellani</span></strong>. All Rights Reserved
         &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
         &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
         &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
@@ -205,6 +225,8 @@
     </div>
   
   </footer>
+  <!-- End Footer -->
+
 
 
   </main>
@@ -217,7 +239,7 @@
   <script src="css/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="css/swiper/swiper-bundle.min.js"></script>
   <script src="css/waypoints/noframework.waypoints.js"></script>
-  <script src="css/php-email-form/validate.js"></script>
+
 
   <!-- Template Main JS File -->
   <script src="js/main.js"></script>

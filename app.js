@@ -12,7 +12,6 @@ var fs  = require('fs');
 
 
 
-
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('recibos', path.join(__dirname, 'recibos'));
 
@@ -142,13 +141,11 @@ function legajo(peticion, resultado) {
 // }
 
 //Iniciamos Favicon
-app.use(favicon(__dirname + '/public/img/favicon.ico'));
+app.use(favicon(__dirname + '/public/img/favicon-16x16.png'));
 
 //Seteamos las variables de entorno
 dotenv.config({ path: './env/.env' })
 
-//para poder trabajar con las cookies
-app.use(cookieParser())
 
 //Eliminar cache
 app.use(function (req, res, next) {
@@ -159,17 +156,23 @@ app.use(function (req, res, next) {
 
 //Llamar al router
 app.use('/', require('./routes/router'))
+
 const Servidor = app.listen(3000, () => {
+    
     console.log('Server UP running in http://localhost:3000')
 })
 
-// Copia de lo que anda bien
-// var upload = multer({storage: storage}).array('files', 12);
-// app.post('/upload', function (req, res, next) {
-//     upload(req, res, function (err) {
-//         if (err) {
-//             return res.end("Something went wrong:(");
-//         }
-//         res.end("Upload completed.");
-//     });
-// })
+// Manejador de errores 404
+app.use(function(req, res, next) {
+  res.status(404).sendFile(path.join(__dirname, 'public', '404.html'));
+});
+
+app.use(cookieParser())
+
+app.get('/', (req, res) => {
+  res.cookie('nombreCookie', 'valorCookie', {
+    sameSite: 'None',
+    secure: true
+  });
+  res.send('Cookie enviada!');
+});
