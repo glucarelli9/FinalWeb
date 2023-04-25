@@ -1,13 +1,7 @@
-FROM node:alpine
-
-WORKDIR /var/www
-
-COPY package.json .
-
+FROM node:16
+WORKDIR /usr/src/app
+COPY package*.json ./
 RUN npm install
-
 COPY . .
-
-EXPOSE 80
-
-CMD ["node", "app.js"]
+EXPOSE 8080
+CMD [ "node", "app.js" ]
