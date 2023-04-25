@@ -107,78 +107,103 @@
     <div class="container">
         <div class="row">
           <div class="col">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                <div class="row">
-                  <div class="form-group col-md-6">
-                    <label for="name">Tu Nombre</label>
-                    <input type="text" name="name" class="form-control" id="name" required>
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="name">Tu Email</label>
-                    <input type="email" class="form-control" name="email" id="email" required>
-                  </div>
+            
+            <form class="php-email-form">
+              <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" class="form-control" id="telefono" name="telefono" required>
+              </div>
+              <div class="form-group">
+                <label for="perfileria">Perfilería:</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="aluminio" name="perfileria[]" value="Aluminio">
+                  <label class="form-check-label" for="aluminio">Aluminio</label>
                 </div>
-                <div class="form-group">
-                  <label for="name">Asunto</label>
-                  <input type="text" class="form-control" name="subject" id="subject" required>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="pvc" name="perfileria[]" value="PVC">
+                  <label class="form-check-label" for="pvc">PVC</label>
                 </div>
-                <div class="form-group">
-                  <label for="name">Mensaje</label>
-                  <textarea class="form-control" name="message" rows="10" required></textarea>
+              </div>
+              <div class="form-group">
+                <label for="dvh">Con Sistema DVH:</label>
+                <div class="form-check">
+                  <input class="form-input" type="radio" name="dvh" id="dvh_si" value="Si">
+                  <label class="form-label" for="dvh_si">Sí</label>
+                  <input class="form-input" type="radio" name="dvh" id="dvh_no" value="No">
+                  <label class="form" for="dvh_no">No</label>
                 </div>
-                <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Tu mensaje a sido enviado!</div>
-                </div>
-                <div class="text-center"><button type="submit">Enviar</button></div>
-              </form>
+              
+              </div>
+              <div class="form-group">
+                <label for="urgencia">Urgencia de obra:</label>
+                <select class="form-control" id="urgencia" name="urgencia">
+                  <option value="Baja">Baja</option>
+                  <option value="Media">Media</option>
+                  <option value="Alta">Alta</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="name">Mensaje</label>
+                <textarea class="form-control" name="message" rows="10" required=""></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+            
+            
           </div>
 
           
-          <div class="col">
-                <div class="info">
-                  <div class="address">
-                    <i class="bi bi-geo-alt"></i>
-                    <h4>Ubicacion:</h4>
-                    <p>4400 La Rioja 465, Salta, Capital</p>
-                  </div>
-      
-                  <div class="email">
-                    <i class="bi bi-envelope"></i>
-                    <h4>Email:</h4>
-                    <p>
-<a href="mailto:presupuestos@castellanividrios.com.ar?Subject=Prespuesto Castellani">Escribenos aqui</a>
-</p>
-                  </div>
-      
-                  <div class="phone">
-                    <i class="bi bi-phone"></i>
-                    <h4>Telefonos:</h4>
-                    <p>0387 - 4234500 | 0387 - 4234555</p>
-                  </div>
-          
-        </div>
-
-
-
-    <!--    
-    <div class="container">
-        <div class="row">
-          <div class="col align-self-start">One of three columns</div>
-          <div class="col align-self-center">One of three columns</div>
-          <div class="col align-self-end">One of three columns</div>
-        </div>
-      </div> -->
-   
-   
-   
-   
-  
-        </div>
+     
        
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7243.789107088201!2d-65.409749!3d-24.799064!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941bc3a0c892c74d%3A0x583f13f7b75067f3!2sLa%20Rioja%20465%2C%20A4400%20Salta%2C%20Argentina!5e0!3m2!1ses-419!2sus!4v1674047796120!5m2!1ses-419!2sus" width="300" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
+        <div class="col">
+          <div class="info">
+            <div class="address">
+              <i class="bi bi-geo-alt"></i>
+              <h4>Ubicacion:</h4>
+              <p>4400 La Rioja 465, Salta, Capital</p>
+            </div>
 
+            <div class="email">
+              <i class="bi bi-envelope"></i>
+              <h4>Email:</h4>
+              <p>
+<a href="mailto:presupuestos@castellanividrios.com.ar?Subject=Prespuesto Castellani">Escribenos aqui</a>
+</p>
+            </div>
+
+            <div class="phone">
+              <i class="bi bi-phone"></i>
+              <h4>Telefonos:</h4>
+              <p>0387 - 4234500 | 0387 - 4234555</p>
+            </div>
+    
+  </div>
+
+
+
+<!--    
+<div class="container">
+  <div class="row">
+    <div class="col align-self-start">One of three columns</div>
+    <div class="col align-self-center">One of three columns</div>
+    <div class="col align-self-end">One of three columns</div>
+  </div>
+</div> -->
+
+
+
+
+
+  </div>
   </section><!-- End Contact Section -->
     <!-- End Contact Section -->
     <section id="cta" class="cta">

@@ -131,6 +131,12 @@ h6 {
     width: 17%;
     filter: invert(1);
 }
+@media (max-width: 767px) {
+  .client-img1{
+    width: 70%;
+  }
+}
+
 @media (max-width: 767px) { /* ajusta los estilos para dispositivos con pantalla de hasta 767px de ancho */
   .image1{
     position: absolute;
@@ -777,8 +783,12 @@ section {
 
 .section-bg {
   background-color: #f3f5fa;
-    padding: 4.4em
+  padding: 0.4em;
 
+}
+.section-bg1 {
+  background-color: #f3f5fa;
+  padding: 4.4em;
 }
 
 .section-title {
@@ -807,6 +817,33 @@ section {
   position: relative;
   color: #dc3545;
 }
+.simbolomas1{
+  display: block;
+    position: absolute;
+    width: 0.8em;
+    margin: 18px;
+}
+.counter {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.count {
+  display: block;
+  color: #dc3545;
+}
+
+.title {
+  display: block;
+  margin-top: 20px;
+  font-size: 24px;
+  color: #666;
+}
+
+
+
 .section-title h2.dvh2::before {
   content: "";
   position: absolute;
@@ -875,7 +912,7 @@ section {
 
 @media (max-width: 768px) {
   .clients img {
-    max-width: 40%;
+    max-width: 100%;
   }
 }
 
@@ -1860,7 +1897,7 @@ section {
 }
 
 .contact .php-email-form input {
-  height: 44px;
+  
 }
 
 .contact .php-email-form textarea {
