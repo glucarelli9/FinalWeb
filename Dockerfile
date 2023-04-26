@@ -1,5 +1,4 @@
-
-FROM node:10-alpine
+FROM node:10-slim
 
 RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
 
@@ -9,10 +8,14 @@ COPY package*.json ./
 
 USER node
 
-RUN npm install
+RUN npm install --production
+
+RUN rm -rf node_modules
 
 COPY --chown=node:node . .
 
 EXPOSE 8090
+
+
 
 CMD [ "node", "app.js" ]
